@@ -1,5 +1,5 @@
 {
-  "name": "mreckful-whale",
+  "name": "wow-whale",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,9 +8,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "4.2.1",
+    "antd": "4.3.0",
+    "autocannon": "^7.5.1",
+    "axios": "^0.24.0",
+    "byte-size": "^8.1.0",
+    "dayjs": "^1.10.7",
+    "formidable": "^2.0.1",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "mongodb": "3.5.9",
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-json-view": "^1.21.3"
   },
   "devDependencies": {
     "eslint": "8.6.0",

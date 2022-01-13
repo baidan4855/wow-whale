@@ -1,16 +1,10 @@
-import { useRouter } from "next/router"
 import { Layout, Menu } from "antd"
-import {
-  CloudUploadOutlined,
-  FieldTimeOutlined,
-  ApiOutlined,
-} from "@ant-design/icons"
+import { CloudUploadOutlined, FieldTimeOutlined } from "@ant-design/icons"
 import "antd/dist/antd.dark.css"
 
 const { Header, Content, Footer, Sider } = Layout
 
 const AppLayout = ({ Component, pageProps }) => {
-  const router = useRouter()
   return (
     <Layout style={{ height: "100vh" }}>
       <Header style={{ fontSize: 18 }}>
@@ -20,20 +14,16 @@ const AppLayout = ({ Component, pageProps }) => {
         <Sider with={200}>
           <Menu
             mode="inline"
-            onClick={(e) => router.push(e.key)}
-            defaultSelectedKeys={[router.pathname]}
+            defaultSelectedKeys={["api-management"]}
             style={{
               height: "100%",
               borderRight: 0,
             }}
           >
-            <Menu.Item icon={<CloudUploadOutlined />} key="/upload-postman-log">
-              解析Postman记录
-            </Menu.Item>
-            {/* <Menu.Item icon={<ApiOutlined />} key="/api-mgr">
+            <Menu.Item icon={<CloudUploadOutlined />} key="api-management">
               API管理
-            </Menu.Item> */}
-            <Menu.Item icon={<FieldTimeOutlined />} key="/task-mgr">
+            </Menu.Item>
+            <Menu.Item icon={<FieldTimeOutlined />} key="task-management">
               任务管理
             </Menu.Item>
           </Menu>
@@ -50,7 +40,7 @@ const AppLayout = ({ Component, pageProps }) => {
           </Content>
         </Layout>
       </Layout>
-      <Footer style={{ color: "#b1b1b1", backgroundColor: "#1f1f1f" }}>
+      <Footer style={{ color: "white" }}>
         <div style={{ textAlign: "center" }}>iHealth 共同照护</div>
       </Footer>
     </Layout>
